@@ -5,7 +5,7 @@ import sys
 def open_camera():
     cap = cv2.VideoCapture(0, cv2.CAP_V4L2)  # /dev/video0
     if not cap.isOpened():
-        print("❌ Could not open /dev/video0")
+        print("Could not open /dev/video0")
         sys.exit(1)
 
     cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"MJPG"))
