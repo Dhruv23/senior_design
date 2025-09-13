@@ -56,7 +56,7 @@ def main():
                 xyxy = box.xyxy[0]
                 annotator.box_label(xyxy, label, color=(0, 255, 0))
 
-        cv2.imshow("YOLOv8 Live (>=0.8 conf)", annotator.result())
+        cv2.imshow("YOLOv8 Live (>=0.8 conf) press q to quit", annotator.result())
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
