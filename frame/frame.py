@@ -6,7 +6,7 @@ import os
 def capture_frame(output_file: str):
     cap = cv2.VideoCapture(0, cv2.CAP_V4L2)  # /dev/video0
     if not cap.isOpened():
-        print("❌ Could not open /dev/video0")
+        print("could not open /dev/video0")
         sys.exit(1)
 
     cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*"MJPG"))
