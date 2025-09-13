@@ -1,0 +1,5 @@
+[   23.660406] usb 5-4: Product: HD Web Camera
+[   23.660410] usb 5-4: Manufacturer: HD Web Camera
+[   23.660414] usb 5-4: SerialNumber: Ucamera001
+[   24.695919] usb 5-4: Found UVC 1.00 device HD Web Camera (05a3:9331)
+[   24.730495] input: HD Web Camera: HD Web Camera as /devices/pci0000:00/0000:00:08.1/0000:09:00.3/usb5/5-4/5-4:1.0/input/input14
