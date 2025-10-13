@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import time
 import sys
+import math
+import matplotlib.pyplot as plt
 from pyrplidar import PyRPlidar
 
 PORT = "/dev/ttyUSB0"
-BAUD = 115200      # you already confirmed 115200 works
+BAUD = 115200
 CONNECT_TIMEOUT = 8
 MOTOR_PWM = 500
-MAX_POINTS = 20
+MAX_POINTS = 400  # number of plotted samples
 FORCE_SCAN_RETRIES = 3
 RETRY_DELAY = 1.0
 
@@ -16,7 +18,7 @@ def main():
         print(f"Attempting connect to {PORT} at {BAUD} baud...")
         lidar = PyRPlidar()
         lidar.connect(port=PORT, baudrate=BAUD, timeout=CONNECT_TIMEOUT)
-        print(f"PyRPlidar Info : device is connected")
+        print("PyRPlidar Info: device is connected")
     except Exception as e:
         print("Failed to connect:", e)
         return 1
@@ -35,13 +37,13 @@ def main():
         except Exception:
             pass
 
-        # Try to get a working force_scan generator
+        # Try to start force_scan
         gen = None
         for attempt in range(1, FORCE_SCAN_RETRIES + 1):
             try:
                 print(f"Starting force_scan() (attempt {attempt}) ...")
-                scan_generator = lidar.force_scan()   # DO NOT pass timeout kw
-                gen = scan_generator()                # this is how your earlier script did it
+                scan_generator = lidar.force_scan()
+                gen = scan_generator()
                 break
             except Exception as e:
                 print(f"force_scan() attempt {attempt} failed: {e}")
@@ -49,21 +51,56 @@ def main():
 
         if gen is None:
             print("Unable to start force_scan(). Check library version or inspect available methods.")
-            # show available methods to help debug
             print("Available PyRPlidar attributes:", sorted([a for a in dir(lidar) if not a.startswith('_')]) )
             return 2
 
-        # iterate and print measured points (safe)
+        # --- Visualization Setup ---
+        plt.ion()
+        fig = plt.figure(figsize=(6,6))
+        ax = fig.add_subplot(111, polar=True)
+        scatter = ax.scatter([], [], s=5, c='b', alpha=0.7)
+        ax.set_ylim(0, 6000)  # in mm
+        ax.set_title("RPLidar Live Scan")
+        plt.show(block=False)
+
+        angles = []
+        distances = []
+
         for count, scan in enumerate(gen):
-            # scan format depends on library version. Print raw so we can inspect.
-            print(count, scan)
-            if count >= MAX_POINTS - 1:
+            if not isinstance(scan, dict):
+                print("Unexpected scan format:", scan)
+                continue
+
+            angle = scan.get("angle", 0.0)
+            distance = scan.get("distance", 0.0)
+            quality = scan.get("quality", 0)
+            start_flag = scan.get("start_flag", False)
+
+            if distance <= 0:
+                continue  # skip invalid readings
+
+            # Convert angle to radians for polar plot
+            angle_rad = math.radians(angle)
+
+            angles.append(angle_rad)
+            distances.append(distance)
+
+            # Periodically update the plot
+            if count % 20 == 0:
+                scatter.set_offsets(
+                    [[a, d] for a, d in zip(angles, distances)]
+                )
+                ax.set_ylim(0, max(distances) + 500)
+                plt.draw()
+                plt.pause(0.001)
+
+            if count >= MAX_POINTS:
                 break
 
-    except IndexError as e:
-        print("IndexError while parsing descriptor — serial read probably returned empty bytes.")
-        print("Possible causes: wrong baud, timeout or temporary device hiccup.")
-        raise
+        print("Scan complete. Close the plot window to exit.")
+        plt.ioff()
+        plt.show()
+
     except Exception as e:
         print("Unhandled exception during scan:", repr(e))
         raise
@@ -77,9 +114,11 @@ def main():
         except Exception:
             pass
         lidar.disconnect()
-        print("PyRPlidar Info : device is disconnected")
+        print("PyRPlidar Info: device is disconnected")
         print("Disconnected cleanly.")
+
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
