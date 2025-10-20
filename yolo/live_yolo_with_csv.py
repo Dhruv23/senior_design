@@ -4,11 +4,12 @@ import os
 import importlib.util
 import cv2
 import torch
+import time
+import csv
 from ultralytics import YOLO
 from ultralytics.utils.plotting import Annotator
 
-
-#import open_camera from video.py 
+# import open_camera from video.py 
 HERE = os.path.dirname(os.path.abspath(__file__))
 VIDEO_PY = os.path.normpath(os.path.join(HERE, "../video/video.py"))
 
@@ -18,19 +19,23 @@ spec.loader.exec_module(video_mod)  # now video_mod.open_camera() is available
 
 
 def main():
-    cap = video_mod.open_camera() # loading from prewritten file
+    cap = video_mod.open_camera()  # loading from prewritten file
 
     # choose device: GPU if available, else CPU
     use_cuda = torch.cuda.is_available()
     device = 0 if use_cuda else "cpu"
 
-    #load YOLO and move to device
+    # load YOLO and move to device
     model = YOLO("yolov8n.pt")
     if use_cuda:
-        model.to("cuda") 
+        model.to("cuda")
     use_half = bool(use_cuda)  # FP16 only on CUDA
 
     print(f"press 'q' to quit  |  Device: {'CUDA:0' if use_cuda else 'CPU'}  |  FP16: {use_half}")
+
+    last_csv_time = 0
+    csv_path = os.path.join(HERE, "detections.csv")
+
     while True:
         ok, frame = cap.read()
         if not ok:
@@ -48,13 +53,34 @@ def main():
 
         # Draw only boxes with conf >= 0.8
         annotator = Annotator(frame)
+        detections = []  # store detections for CSV
+
         for box in res.boxes:
             conf = float(box.conf[0])
             if conf >= 0.8:
                 cls_id = int(box.cls[0])
                 label = f"{model.names[cls_id]} {conf:.2f}"
-                xyxy = box.xyxy[0]
+                xyxy = box.xyxy[0].tolist()  # [x1, y1, x2, y2]
                 annotator.box_label(xyxy, label, color=(0, 255, 0))
+
+                detections.append({
+                    "class": model.names[cls_id],
+                    "confidence": f"{conf:.2f}",
+                    "x1": f"{xyxy[0]:.2f}",
+                    "y1": f"{xyxy[1]:.2f}",
+                    "x2": f"{xyxy[2]:.2f}",
+                    "y2": f"{xyxy[3]:.2f}"
+                })
+
+        # Write detections to CSV once per second
+        now = time.time()
+        if now - last_csv_time >= 1.0:
+            with open(csv_path, mode="w", newline="") as csvfile:
+                fieldnames = ["class", "confidence", "x1", "y1", "x2", "y2"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(detections)
+            last_csv_time = now
 
         cv2.imshow("YOLOv8 Live (>=0.8 conf) press q to quit", annotator.result())
         if cv2.waitKey(1) & 0xFF == ord("q"):

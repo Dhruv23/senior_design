@@ -8,6 +8,7 @@ from pyrplidar import PyRPlidar
 
 PORT = "/dev/ttyUSB0"
 BAUD = 115200
+# BAUD = 1000000  # S2 defaults to 1 Mbps
 CONNECT_TIMEOUT = 8
 MOTOR_PWM = 500
 FORCE_SCAN_RETRIES = 3
