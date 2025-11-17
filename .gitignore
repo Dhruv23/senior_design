@@ -1,1 +1,3 @@
 lidar_new/*
+venv/*
+__pycache__/*
