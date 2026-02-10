@@ -1,0 +1,12 @@
+[1.644s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[1.843s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[1.889s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim
+[1.929s] -- Install configuration: ""
+[1.930s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch
+[1.931s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch/sim.launch.py
+[1.936s] [31mCMake Error at cmake_install.cmake:46 (file):
+[1.938s]   file INSTALL cannot find "/home/scu2u/ros2_ws/src/scu2u_sim/worlds": No
+[1.939s]   such file or directory.
+[1.940s] 
+[1.941s] [0m
+[1.942s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim

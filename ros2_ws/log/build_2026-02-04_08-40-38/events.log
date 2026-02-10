@@ -1,0 +1,127 @@
+[0.000000] (-) TimerEvent: {}
+[0.001029] (python_package) JobQueued: {'identifier': 'python_package', 'dependencies': OrderedDict()}
+[0.002055] (scu2u_sim) JobQueued: {'identifier': 'scu2u_sim', 'dependencies': OrderedDict()}
+[0.002663] (python_package) JobStarted: {'identifier': 'python_package'}
+[0.042115] (scu2u_sim) JobStarted: {'identifier': 'scu2u_sim'}
+[0.099189] (-) TimerEvent: {}
+[0.200044] (-) TimerEvent: {}
+[0.300902] (-) TimerEvent: {}
+[0.401724] (-) TimerEvent: {}
+[0.502513] (-) TimerEvent: {}
+[0.603297] (-) TimerEvent: {}
+[0.704048] (-) TimerEvent: {}
+[0.804767] (-) TimerEvent: {}
+[0.905464] (-) TimerEvent: {}
+[1.006222] (-) TimerEvent: {}
+[1.106975] (-) TimerEvent: {}
+[1.207804] (-) TimerEvent: {}
+[1.308636] (-) TimerEvent: {}
+[1.397693] (scu2u_sim) JobProgress: {'identifier': 'scu2u_sim', 'progress': 'cmake'}
+[1.401050] (scu2u_sim) Command: {'cmd': ['/usr/bin/cmake', '/home/scu2u/ros2_ws/src/scu2u_sim', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/scu2u/ros2_ws/install/scu2u_sim'], 'cwd': '/home/scu2u/ros2_ws/build/scu2u_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'scu2u'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/scu2u'), ('OLDPWD', '/home/scu2u'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1721'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'scu2u'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'scu2u'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/scu2u/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/scu2u-desktop:@/tmp/.ICE-unix/1687,unix/scu2u-desktop:/tmp/.ICE-unix/1687'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f637cda8_37f8_4ebd_b855_2aca2fd0fb95'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SRQCK3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/scu2u/ros2_ws/build/scu2u_sim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.413627] (-) TimerEvent: {}
+[1.466327] (scu2u_sim) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.513795] (-) TimerEvent: {}
+[1.614802] (-) TimerEvent: {}
+[1.715834] (-) TimerEvent: {}
+[1.816785] (-) TimerEvent: {}
+[1.917549] (-) TimerEvent: {}
+[2.018323] (-) TimerEvent: {}
+[2.119192] (-) TimerEvent: {}
+[2.133908] (scu2u_sim) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.219345] (-) TimerEvent: {}
+[2.222845] (scu2u_sim) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.319548] (-) TimerEvent: {}
+[2.420896] (-) TimerEvent: {}
+[2.522267] (-) TimerEvent: {}
+[2.623317] (-) TimerEvent: {}
+[2.632130] (scu2u_sim) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.636962] (scu2u_sim) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.640633] (scu2u_sim) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.655261] (scu2u_sim) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.665459] (scu2u_sim) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.705494] (scu2u_sim) StdoutLine: {'line': b'-- Generating done\n'}
+[2.717083] (scu2u_sim) StdoutLine: {'line': b'-- Build files have been written to: /home/scu2u/ros2_ws/build/scu2u_sim\n'}
+[2.723546] (-) TimerEvent: {}
+[2.727857] (scu2u_sim) CommandEnded: {'returncode': 0}
+[2.730259] (scu2u_sim) JobProgress: {'identifier': 'scu2u_sim', 'progress': 'build'}
+[2.732796] (scu2u_sim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/scu2u/ros2_ws/build/scu2u_sim', '--', '-j4', '-l4'], 'cwd': '/home/scu2u/ros2_ws/build/scu2u_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'scu2u'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/scu2u'), ('OLDPWD', '/home/scu2u'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1721'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'scu2u'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'scu2u'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/scu2u/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/scu2u-desktop:@/tmp/.ICE-unix/1687,unix/scu2u-desktop:/tmp/.ICE-unix/1687'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f637cda8_37f8_4ebd_b855_2aca2fd0fb95'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SRQCK3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/scu2u/ros2_ws/build/scu2u_sim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.823851] (-) TimerEvent: {}
+[2.910006] (scu2u_sim) CommandEnded: {'returncode': 0}
+[2.912450] (scu2u_sim) JobProgress: {'identifier': 'scu2u_sim', 'progress': 'install'}
+[2.924043] (-) TimerEvent: {}
+[2.959632] (scu2u_sim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/scu2u/ros2_ws/build/scu2u_sim'], 'cwd': '/home/scu2u/ros2_ws/build/scu2u_sim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'scu2u'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/scu2u'), ('OLDPWD', '/home/scu2u'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1721'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'scu2u'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'scu2u'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/scu2u/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/scu2u-desktop:@/tmp/.ICE-unix/1687,unix/scu2u-desktop:/tmp/.ICE-unix/1687'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f637cda8_37f8_4ebd_b855_2aca2fd0fb95'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.SRQCK3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/scu2u/ros2_ws/build/scu2u_sim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.986823] (scu2u_sim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.990915] (scu2u_sim) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.992353] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch/sim.launch.py\n'}
+[3.024226] (-) TimerEvent: {}
+[3.026162] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/worlds/campus.sdf\n'}
+[3.066277] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/package_run_dependencies/scu2u_sim\n'}
+[3.104640] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/parent_prefix_path/scu2u_sim\n'}
+[3.124456] (-) TimerEvent: {}
+[3.141502] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.sh\n'}
+[3.182179] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.dsv\n'}
+[3.217501] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.sh\n'}
+[3.224630] (-) TimerEvent: {}
+[3.256919] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.dsv\n'}
+[3.292943] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.bash\n'}
+[3.324877] (-) TimerEvent: {}
+[3.330637] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.sh\n'}
+[3.384637] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.zsh\n'}
+[3.425223] (-) TimerEvent: {}
+[3.434990] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.dsv\n'}
+[3.489326] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.dsv\n'}
+[3.525439] (-) TimerEvent: {}
+[3.528816] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/packages/scu2u_sim\n'}
+[3.530334] (python_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/scu2u/ros2_ws/build/python_package/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/scu2u/ros2_ws/build/python_package', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'scu2u', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/scu2u', 'OLDPWD': '/home/scu2u', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1721', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'scu2u', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'scu2u', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/scu2u/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/scu2u-desktop:@/tmp/.ICE-unix/1687,unix/scu2u-desktop:/tmp/.ICE-unix/1687', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/f637cda8_37f8_4ebd_b855_2aca2fd0fb95', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.SRQCK3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/scu2u/ros2_ws/build/python_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/scu2u/ros2_ws/build/python_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/scu2u/ros2_ws/install/python_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[3.568962] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig.cmake\n'}
+[3.608916] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig-version.cmake\n'}
+[3.625677] (-) TimerEvent: {}
+[3.643442] (scu2u_sim) StdoutLine: {'line': b'-- Symlinking: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.xml\n'}
+[3.685704] (scu2u_sim) CommandEnded: {'returncode': 0}
+[3.725972] (-) TimerEvent: {}
+[3.786746] (scu2u_sim) JobEnded: {'identifier': 'scu2u_sim', 'rc': 0}
+[3.826162] (-) TimerEvent: {}
+[3.926927] (-) TimerEvent: {}
+[4.027716] (-) TimerEvent: {}
+[4.128407] (-) TimerEvent: {}
+[4.229150] (-) TimerEvent: {}
+[4.329840] (-) TimerEvent: {}
+[4.430516] (-) TimerEvent: {}
+[4.531208] (-) TimerEvent: {}
+[4.631989] (-) TimerEvent: {}
+[4.732726] (-) TimerEvent: {}
+[4.833727] (-) TimerEvent: {}
+[4.858158] (python_package) StdoutLine: {'line': b'running develop\n'}
+[4.934026] (-) TimerEvent: {}
+[5.035224] (-) TimerEvent: {}
+[5.136012] (-) TimerEvent: {}
+[5.236742] (-) TimerEvent: {}
+[5.337595] (-) TimerEvent: {}
+[5.438545] (-) TimerEvent: {}
+[5.539254] (-) TimerEvent: {}
+[5.640004] (-) TimerEvent: {}
+[5.737496] (python_package) StdoutLine: {'line': b'running egg_info\n'}
+[5.738236] (python_package) StdoutLine: {'line': b'writing python_package.egg-info/PKG-INFO\n'}
+[5.739504] (python_package) StdoutLine: {'line': b'writing dependency_links to python_package.egg-info/dependency_links.txt\n'}
+[5.740135] (-) TimerEvent: {}
+[5.740773] (python_package) StdoutLine: {'line': b'writing entry points to python_package.egg-info/entry_points.txt\n'}
+[5.742019] (python_package) StdoutLine: {'line': b'writing requirements to python_package.egg-info/requires.txt\n'}
+[5.742795] (python_package) StdoutLine: {'line': b'writing top-level names to python_package.egg-info/top_level.txt\n'}
+[5.751126] (python_package) StdoutLine: {'line': b"reading manifest file 'python_package.egg-info/SOURCES.txt'\n"}
+[5.755601] (python_package) StdoutLine: {'line': b"writing manifest file 'python_package.egg-info/SOURCES.txt'\n"}
+[5.761387] (python_package) StdoutLine: {'line': b'running build_ext\n'}
+[5.762216] (python_package) StdoutLine: {'line': b'Creating /home/scu2u/ros2_ws/install/python_package/lib/python3.10/site-packages/python-package.egg-link (link to .)\n'}
+[5.765772] (python_package) StdoutLine: {'line': b'Installing log_imu_data_wifi script to /home/scu2u/ros2_ws/install/python_package/lib/python_package\n'}
+[5.766795] (python_package) StdoutLine: {'line': b'Installing send_commands script to /home/scu2u/ros2_ws/install/python_package/lib/python_package\n'}
+[5.767977] (python_package) StdoutLine: {'line': b'Installing test_pub script to /home/scu2u/ros2_ws/install/python_package/lib/python_package\n'}
+[5.769034] (python_package) StdoutLine: {'line': b'Installing test_sub script to /home/scu2u/ros2_ws/install/python_package/lib/python_package\n'}
+[5.770661] (python_package) StdoutLine: {'line': b'\n'}
+[5.778790] (python_package) StdoutLine: {'line': b'Installed /home/scu2u/ros2_ws/build/python_package\n'}
+[5.780580] (python_package) StdoutLine: {'line': b'running symlink_data\n'}
+[5.781909] (python_package) StdoutLine: {'line': b'symbolically linking /home/scu2u/ros2_ws/build/python_package/resource/python_package -> /home/scu2u/ros2_ws/install/python_package/share/ament_index/resource_index/packages\n'}
+[5.783253] (python_package) StdoutLine: {'line': b'symbolically linking /home/scu2u/ros2_ws/build/python_package/package.xml -> /home/scu2u/ros2_ws/install/python_package/share/python_package\n'}
+[5.840471] (-) TimerEvent: {}
+[5.919281] (python_package) CommandEnded: {'returncode': 0}
+[5.940592] (-) TimerEvent: {}
+[5.963485] (python_package) JobEnded: {'identifier': 'python_package', 'rc': 0}
+[5.966570] (-) EventReactorShutdown: {}

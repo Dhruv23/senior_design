@@ -1,0 +1,32 @@
+[1.893s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/scu2u/ros2_ws/src/scu2u_sim -DCMAKE_INSTALL_PREFIX=/home/scu2u/ros2_ws/install/scu2u_sim
+[3.288s] -- The C compiler identification is GNU 11.4.0
+[4.246s] -- The CXX compiler identification is GNU 11.4.0
+[4.332s] -- Detecting C compiler ABI info
+[4.854s] -- Detecting C compiler ABI info - done
+[4.891s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.896s] -- Detecting C compile features
+[4.901s] -- Detecting C compile features - done
+[4.925s] -- Detecting CXX compiler ABI info
+[5.445s] -- Detecting CXX compiler ABI info - done
+[5.481s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.482s] -- Detecting CXX compile features
+[5.485s] -- Detecting CXX compile features - done
+[5.542s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[6.674s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[7.559s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[8.100s] -- Added test 'lint_cmake' to check CMake code style
+[8.110s] -- Added test 'xmllint' to check XML markup files
+[8.123s] -- Configuring done
+[8.150s] -- Generating done
+[8.160s] -- Build files have been written to: /home/scu2u/ros2_ws/build/scu2u_sim
+[8.177s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/scu2u/ros2_ws/src/scu2u_sim -DCMAKE_INSTALL_PREFIX=/home/scu2u/ros2_ws/install/scu2u_sim
+[8.188s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[8.364s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[8.409s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim
+[8.454s] -- Install configuration: ""
+[8.455s] [31mCMake Error at cmake_install.cmake:46 (file):
+[8.456s]   file INSTALL cannot find "/home/scu2u/ros2_ws/src/scu2u_sim/launch": No
+[8.457s]   such file or directory.
+[8.458s] 
+[8.461s] [0m
+[8.462s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim

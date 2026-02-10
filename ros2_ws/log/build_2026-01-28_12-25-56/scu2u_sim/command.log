@@ -1,0 +1,6 @@
+Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/scu2u/ros2_ws/src/scu2u_sim -DCMAKE_INSTALL_PREFIX=/home/scu2u/ros2_ws/install/scu2u_sim
+Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/scu2u/ros2_ws/src/scu2u_sim -DCMAKE_INSTALL_PREFIX=/home/scu2u/ros2_ws/install/scu2u_sim
+Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim
+Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim

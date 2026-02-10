@@ -1,0 +1,24 @@
+[1.637s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[1.833s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/ros2_ws/build/scu2u_sim -- -j4 -l4
+[1.873s] Invoking command in '/home/scu2u/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim
+[1.916s] -- Install configuration: ""
+[1.917s] -- Up-to-date: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch
+[1.919s] -- Up-to-date: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch/sim.launch.py
+[1.920s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/worlds
+[1.929s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/worlds/campus.sdf
+[1.929s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/package_run_dependencies/scu2u_sim
+[1.930s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/parent_prefix_path/scu2u_sim
+[1.931s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.sh
+[1.932s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.dsv
+[1.932s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.sh
+[1.938s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.dsv
+[1.939s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.bash
+[1.940s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.sh
+[1.941s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.zsh
+[1.941s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.dsv
+[1.942s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.dsv
+[1.943s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/packages/scu2u_sim
+[1.944s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig.cmake
+[1.946s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig-version.cmake
+[1.947s] -- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.xml
+[1.955s] Invoked command in '/home/scu2u/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/ros2_ws/build/scu2u_sim

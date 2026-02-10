@@ -1,0 +1,6 @@
+[console_scripts]
+log_imu_data_wifi = python_package.log_imu_data_wifi:main
+send_commands = python_package.send_commands:main
+test_pub = python_package.testing.test_pub:main
+test_sub = python_package.testing.test_sub:main
+

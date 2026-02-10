@@ -1,0 +1,8 @@
+-- Install configuration: ""
+-- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch
+-- Installing: /home/scu2u/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch/sim.launch.py
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find "/home/scu2u/ros2_ws/src/scu2u_sim/worlds": No
+  such file or directory.
+
+[0m
