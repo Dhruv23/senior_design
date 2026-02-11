@@ -1,0 +1,15 @@
+Spawn a rover:
+gz service -s /world/blocks_world/create   --reqtype gz.msgs.EntityFactory   --reptype gz.msgs.Boolean   --timeout 10000   --req "sdf_filename: '$PWD/models/scu2u_rover/model.sdf', name: 'scu2u1', pose: { position: { x: 0, y: 0, z: 0.25 } }"
+
+Spawn a box:
+gz service -s /world/blocks_world/create   --reqtype gz.msgs.EntityFactory   --reptype gz.msgs.Boolean   --timeout 15000   --req "sdf: \"<?xml version='1.0'?><sdf version='1.9'><model name='fall_test2'><pose>0 0 3 0 0 0</pose><link name='link'><inertial><mass>1.0</mass></inertial><collision name='col'><geometry><box><size>0.2 0.2 0.2</size></box></geometry></collision><visual name='vis'><geometry><box><size>0.2 0.2 0.2</size></box></geometry></visual></link></model></sdf>\", name: 'fall_test2'"
+
+Run the Simulation: 
+gz sim -r worlds/campus.sdf
+
+Kill running Gazebo Processes : 
+pkill -f "gz sim"
+pkill -f "gzserver"
+pkill -f "gzclient"
+pkill -f "ign gazebo"
+pkill -f "gz-sim"

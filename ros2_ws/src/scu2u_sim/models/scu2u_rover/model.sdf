@@ -1,128 +1,186 @@
 <?xml version="1.0" ?>
 <sdf version="1.9">
-  <model name="scu2u_rover">
-    <static>false</static>
+  <model name="simple_rover">
 
-    <!-- Chassis -->
-    <link name="chassis_link">
-      <pose>0 0 0 0 0 0</pose>
+    <!-- body -->
+    <link name="base_link">
+      <pose>0 0 0.12 0 0 0</pose>
 
-      <visual name="chassis_visual">
-        <pose>0 0 0.05 0 0 0</pose>
-        <geometry>
-          <box><size>0.30 0.20 0.10</size></box>
-        </geometry>
-      </visual>
-
-      <collision name="chassis_collision">
-        <pose>0 0 0.05 0 0 0</pose>
-        <geometry>
-          <box><size>0.30 0.20 0.10</size></box>
-        </geometry>
+      <collision name="col">
+        <geometry><box><size>0.45 0.30 0.12</size></box></geometry>
       </collision>
 
-      <!-- Give it some inertia so physics is stable -->
-      <inertial>
-        <mass>5.0</mass>
-        <inertia>
-          <ixx>0.05</ixx><iyy>0.05</iyy><izz>0.05</izz>
-          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
-        </inertia>
-      </inertial>
-    </link>
-
-    <!-- LiDAR link (mounted on chassis like your URDF: 0.08 0 0.12 relative to base) -->
-    <link name="lidar_link">
-      <pose>0.08 0 0.12 0 0 0</pose>
-
-      <visual name="lidar_visual">
-        <geometry>
-          <cylinder><radius>0.03</radius><length>0.05</length></cylinder>
-        </geometry>
+      <visual name="vis">
+        <geometry><box><size>0.45 0.30 0.12</size></box></geometry>
       </visual>
 
-      <!-- 360° CPU ray LiDAR -->
-      <sensor name="lidar_2d" type="ray">
+      <inertial><mass>6.0</mass></inertial>
+    </link>
+
+    <!-- LiDAR link -->
+    <link name="lidar_link">
+      <pose>0.18 0 0.20 0 0 0</pose>
+      <inertial><mass>0.1</mass></inertial>
+
+      <visual name="vis">
+        <geometry><cylinder><radius>0.03</radius><length>0.02</length></cylinder></geometry>
+      </visual>
+
+      <sensor name="lidar" type="gpu_lidar">
+        <always_on>true</always_on>
         <pose>0 0 0 0 0 0</pose>
-        <update_rate>5</update_rate>
-        <ray>
+        <update_rate>10</update_rate>
+        <topic>/scan</topic>
+        <visualize>true</visualize>
+
+        <lidar>
           <scan>
             <horizontal>
               <samples>720</samples>
               <resolution>1</resolution>
-              <min_angle>-3.14159265359</min_angle>
-              <max_angle>3.14159265359</max_angle>
+              <min_angle>-3.14159</min_angle>
+              <max_angle>3.14159</max_angle>
             </horizontal>
           </scan>
           <range>
             <min>0.12</min>
-            <max>10.0</max>
+            <max>12.0</max>
             <resolution>0.01</resolution>
           </range>
-        </ray>
-        <visualize>true</visualize>
+        </lidar>
       </sensor>
     </link>
 
     <joint name="lidar_joint" type="fixed">
-      <parent>chassis_link</parent>
+      <parent>base_link</parent>
       <child>lidar_link</child>
     </joint>
 
-    <!-- Wheels (simple visuals; you can add joints/drive later) -->
-    <link name="wheel_fl">
-      <pose>0.11 0.06 0.00 0 0 0</pose>
-      <visual name="wheel_fl_visual">
-        <pose>0 0 0 -1.5708 0 0</pose>
-        <geometry>
-          <cylinder><radius>0.04</radius><length>0.02</length></cylinder>
-        </geometry>
+    <!-- wheel geometry constants: radius=0.06, length=0.03 -->
+
+    <!-- Front Left Wheel -->
+    <link name="front_left_wheel">
+      <pose>0.15 0.18 0.06 1.57079632679 0 0</pose>
+      <collision name="col">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>2.0</mu>
+              <mu2>2.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+
+      </collision>
+      <visual name="vis">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
       </visual>
+      <inertial><mass>0.4</mass></inertial>
     </link>
 
-    <link name="wheel_fr">
-      <pose>0.11 -0.06 0.00 0 0 0</pose>
-      <visual name="wheel_fr_visual">
-        <pose>0 0 0 -1.5708 0 0</pose>
-        <geometry>
-          <cylinder><radius>0.04</radius><length>0.02</length></cylinder>
-        </geometry>
+    <!-- Rear Left Wheel -->
+    <link name="rear_left_wheel">
+      <pose>-0.15 0.18 0.06 1.57079632679 0 0</pose>
+      <collision name="col">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+      
+        <surface>
+          <friction>
+            <ode>
+              <mu>2.0</mu>
+              <mu2>2.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+
+      </collision>
+      <visual name="vis">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
       </visual>
+      <inertial><mass>0.4</mass></inertial>
     </link>
 
-    <link name="wheel_rl">
-      <pose>-0.11 0.06 0.00 0 0 0</pose>
-      <visual name="wheel_rl_visual">
-        <pose>0 0 0 -1.5708 0 0</pose>
-        <geometry>
-          <cylinder><radius>0.04</radius><length>0.02</length></cylinder>
-        </geometry>
+    <!-- Front Right Wheel -->
+    <link name="front_right_wheel">
+      <pose>0.15 -0.18 0.06 1.57079632679 0 0</pose>
+      <collision name="col">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>2.0</mu>
+              <mu2>2.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+
+      </collision>
+      <visual name="vis">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
       </visual>
+      <inertial><mass>0.4</mass></inertial>
     </link>
 
-    <link name="wheel_rr">
-      <pose>-0.11 -0.06 0.00 0 0 0</pose>
-      <visual name="wheel_rr_visual">
-        <pose>0 0 0 -1.5708 0 0</pose>
-        <geometry>
-          <cylinder><radius>0.04</radius><length>0.02</length></cylinder>
-        </geometry>
+    <!-- Rear Right Wheel -->
+    <link name="rear_right_wheel">
+      <pose>-0.15 -0.18 0.06 1.57079632679 0 0</pose>
+      <collision name="col">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>2.0</mu>
+              <mu2>2.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+ 
+      </collision>
+      <visual name="vis">
+        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
       </visual>
+      <inertial><mass>0.4</mass></inertial>
     </link>
 
-    <!-- Fix wheels to chassis for now (later we’ll make continuous joints and diff-drive) -->
-    <joint name="wheel_fl_joint" type="fixed">
-      <parent>chassis_link</parent><child>wheel_fl</child>
+    <!-- wheel joints (spin axis set to +Y like your original) -->
+    <joint name="front_left_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>front_left_wheel</child>
+      <axis><xyz>0 1 0</xyz></axis>
     </joint>
-    <joint name="wheel_fr_joint" type="fixed">
-      <parent>chassis_link</parent><child>wheel_fr</child>
+
+    <joint name="rear_left_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rear_left_wheel</child>
+      <axis><xyz>0 1 0</xyz></axis>
     </joint>
-    <joint name="wheel_rl_joint" type="fixed">
-      <parent>chassis_link</parent><child>wheel_rl</child>
+
+    <joint name="front_right_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>front_right_wheel</child>
+      <axis><xyz>0 1 0</xyz></axis>
     </joint>
-    <joint name="wheel_rr_joint" type="fixed">
-      <parent>chassis_link</parent><child>wheel_rr</child>
+
+    <joint name="rear_right_wheel_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>rear_right_wheel</child>
+      <axis><xyz>0 1 0</xyz></axis>
     </joint>
+
+    <!-- 4-wheel skid-steer using DiffDrive (multiple joints per side) -->
+    <plugin filename="libgz-sim-diff-drive-system.so"
+            name="gz::sim::systems::DiffDrive">
+      <left_joint>front_left_wheel_joint</left_joint>
+      <left_joint>rear_left_wheel_joint</left_joint>
+
+      <right_joint>front_right_wheel_joint</right_joint>
+      <right_joint>rear_right_wheel_joint</right_joint>
+
+      <wheel_separation>0.36</wheel_separation>
+      <wheel_radius>0.06</wheel_radius>
+      <topic>cmd_vel</topic>
+    </plugin>
 
   </model>
 </sdf>

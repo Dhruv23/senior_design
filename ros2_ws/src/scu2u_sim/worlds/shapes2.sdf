@@ -1,13 +1,18 @@
 <?xml version="1.0" ?>
-<sdf version="1.9">
-  <world name="blocks_world">
-    <gravity>0 0 -9.8</gravity>
-    <physics name="default_physics" type="ode">
-      <max_step_size>0.001</max_step_size>
-      <real_time_factor>1.0</real_time_factor>
-    </physics>
-
-  <!-- Required for visuals + sensors to publish topics -->
+<sdf version="1.11">
+  <!--
+    Try moving a model using the command in the following CDATA block::
+  -->
+  <![CDATA[
+    gz service -s /world/shapes/set_pose \
+               --reqtype gz.msgs.Pose --reptype gz.msgs.Boolean \
+               --timeout 300 --req 'name: "box", position: {z: 5.0}'
+  ]]>
+  <world name="campus">
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+    </scene>
     <plugin filename="libgz-sim-scene-broadcaster-system.so"
             name="gz::sim::systems::SceneBroadcaster"/>
 
@@ -19,22 +24,21 @@
 
     <plugin filename="libgz-sim-physics-system.so"
         name="gz::sim::systems::Physics"/>
-        
-    <light name="sun" type="directional">
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
-      <specular>0.1 0.1 0.1 1</specular>
-      <direction>-0.5 0.2 -1</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>1000</range>
         <constant>0.9</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
     </light>
 
-
-    <!-- floor -->
     <model name="ground_plane">
       <static>true</static>
       <link name="link">
@@ -42,30 +46,26 @@
           <geometry>
             <plane>
               <normal>0 0 1</normal>
-              <size>20 20</size>
+              <size>100 100</size>
             </plane>
           </geometry>
         </collision>
-          <visual name="visual">
-            <geometry>
-              <plane>
-                <normal>0 0 1</normal>
-                <size>20 20</size>
-              </plane>
-            </geometry>
-
-            <material>
-              <!-- Dark gray, matte -->
-              <ambient>0.4 0.4 0.4 1</ambient>
-              <diffuse>0.5 0.5 0.5 1</diffuse>
-              <specular>0 0 0 1</specular>
-              <emissive>0 0 0 1</emissive>
-            </material>
-          </visual>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
       </link>
     </model>
-
-    <!-- Block 1 -->
+        <!-- Block 1 -->
     <model name="block1">
       <static>true</static>
       <pose>2 0 0.5 0 0 0</pose>
@@ -106,6 +106,5 @@
         </visual>
       </link>
     </model>
-
   </world>
 </sdf>
