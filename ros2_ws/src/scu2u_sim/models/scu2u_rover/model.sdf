@@ -7,14 +7,20 @@
       <pose>0 0 0.12 0 0 0</pose>
 
       <collision name="col">
-        <geometry><box><size>0.45 0.30 0.12</size></box></geometry>
+        <geometry>
+          <box><size>0.45 0.30 0.12</size></box>
+        </geometry>
       </collision>
 
       <visual name="vis">
-        <geometry><box><size>0.45 0.30 0.12</size></box></geometry>
+        <geometry>
+          <box><size>0.45 0.30 0.12</size></box>
+        </geometry>
       </visual>
 
-      <inertial><mass>6.0</mass></inertial>
+      <inertial>
+        <mass>6.0</mass>
+      </inertial>
     </link>
 
     <!-- LiDAR link -->
@@ -23,7 +29,9 @@
       <inertial><mass>0.1</mass></inertial>
 
       <visual name="vis">
-        <geometry><cylinder><radius>0.03</radius><length>0.02</length></cylinder></geometry>
+        <geometry>
+          <cylinder><radius>0.03</radius><length>0.02</length></cylinder>
+        </geometry>
       </visual>
 
       <sensor name="lidar" type="gpu_lidar">
@@ -51,135 +59,221 @@
       </sensor>
     </link>
 
+    <!-- LiDAR Joint -->
     <joint name="lidar_joint" type="fixed">
       <parent>base_link</parent>
       <child>lidar_link</child>
     </joint>
 
-    <!-- wheel geometry constants: radius=0.06, length=0.03 -->
+    <!-- Wheel surface params -->
+    <!-- wheel radius=0.06, length=0.03 -->
+    <!-- IMPORTANT: cylinder axis is local Z; we rotate collision+visual by +90deg about X -->
+    <!-- Wheel link poses are NOT rotated; only the geometry is rotated. -->
 
     <!-- Front Left Wheel -->
     <link name="front_left_wheel">
-      <pose>0.15 0.18 0.06 1.57079632679 0 0</pose>
+      <pose>0.15 0.18 0.06 0 0 0</pose>
+
       <collision name="col">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
         <surface>
           <friction>
-            <ode>
-              <mu>2.0</mu>
-              <mu2>2.0</mu2>
-            </ode>
+            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
           </friction>
+          <contact>
+            <ode>
+              <kp>1000000</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+              <max_vel>0.1</max_vel>
+            </ode>
+          </contact>
         </surface>
-
       </collision>
+
       <visual name="vis">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
       </visual>
+
       <inertial><mass>0.4</mass></inertial>
     </link>
 
     <!-- Rear Left Wheel -->
     <link name="rear_left_wheel">
-      <pose>-0.15 0.18 0.06 1.57079632679 0 0</pose>
+      <pose>-0.15 0.18 0.06 0 0 0</pose>
+
       <collision name="col">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
-      
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
         <surface>
           <friction>
-            <ode>
-              <mu>2.0</mu>
-              <mu2>2.0</mu2>
-            </ode>
+            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
           </friction>
+          <contact>
+            <ode>
+              <kp>1000000</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+              <max_vel>0.1</max_vel>
+            </ode>
+          </contact>
         </surface>
-
       </collision>
+
       <visual name="vis">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
       </visual>
+
       <inertial><mass>0.4</mass></inertial>
     </link>
 
     <!-- Front Right Wheel -->
     <link name="front_right_wheel">
-      <pose>0.15 -0.18 0.06 1.57079632679 0 0</pose>
+      <pose>0.15 -0.18 0.06 0 0 0</pose>
+
       <collision name="col">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
         <surface>
           <friction>
-            <ode>
-              <mu>2.0</mu>
-              <mu2>2.0</mu2>
-            </ode>
+            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
           </friction>
+          <contact>
+            <ode>
+              <kp>1000000</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+              <max_vel>0.1</max_vel>
+            </ode>
+          </contact>
         </surface>
-
       </collision>
+
       <visual name="vis">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
       </visual>
+
       <inertial><mass>0.4</mass></inertial>
     </link>
 
     <!-- Rear Right Wheel -->
     <link name="rear_right_wheel">
-      <pose>-0.15 -0.18 0.06 1.57079632679 0 0</pose>
+      <pose>-0.15 -0.18 0.06 0 0 0</pose>
+
       <collision name="col">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
         <surface>
           <friction>
-            <ode>
-              <mu>2.0</mu>
-              <mu2>2.0</mu2>
-            </ode>
+            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
           </friction>
+          <contact>
+            <ode>
+              <kp>1000000</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+              <max_vel>0.1</max_vel>
+            </ode>
+          </contact>
         </surface>
- 
       </collision>
+
       <visual name="vis">
-        <geometry><cylinder><radius>0.06</radius><length>0.03</length></cylinder></geometry>
+        <pose>0 0 0 1.57079632679 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.06</radius><length>0.03</length></cylinder>
+        </geometry>
       </visual>
+
       <inertial><mass>0.4</mass></inertial>
     </link>
 
-    <!-- wheel joints (spin axis set to +Y like your original) -->
+    <!-- wheel joints: axle is +/-Y -->
     <joint name="front_left_wheel_joint" type="revolute">
       <parent>base_link</parent>
       <child>front_left_wheel</child>
-      <axis><xyz>0 1 0</xyz></axis>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>50</velocity>
+        </limit>
+      </axis>
     </joint>
 
     <joint name="rear_left_wheel_joint" type="revolute">
       <parent>base_link</parent>
       <child>rear_left_wheel</child>
-      <axis><xyz>0 1 0</xyz></axis>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>50</velocity>
+        </limit>
+      </axis>
     </joint>
 
     <joint name="front_right_wheel_joint" type="revolute">
       <parent>base_link</parent>
       <child>front_right_wheel</child>
-      <axis><xyz>0 1 0</xyz></axis>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>50</velocity>
+        </limit>
+      </axis>
     </joint>
 
     <joint name="rear_right_wheel_joint" type="revolute">
       <parent>base_link</parent>
       <child>rear_right_wheel</child>
-      <axis><xyz>0 1 0</xyz></axis>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>50</velocity>
+        </limit>
+      </axis>
     </joint>
 
-    <!-- 4-wheel skid-steer using DiffDrive (multiple joints per side) -->
+    <!-- 4-wheel skid-steer using DiffDrive -->
+    <!-- Front axle diff drive -->
     <plugin filename="libgz-sim-diff-drive-system.so"
             name="gz::sim::systems::DiffDrive">
       <left_joint>front_left_wheel_joint</left_joint>
-      <left_joint>rear_left_wheel_joint</left_joint>
-
       <right_joint>front_right_wheel_joint</right_joint>
-      <right_joint>rear_right_wheel_joint</right_joint>
-
       <wheel_separation>0.36</wheel_separation>
       <wheel_radius>0.06</wheel_radius>
-      <topic>cmd_vel</topic>
+      <topic>cmd_vel_front</topic>
+    </plugin>
+
+    <!-- Rear axle diff drive -->
+    <plugin filename="libgz-sim-diff-drive-system.so"
+            name="gz::sim::systems::DiffDrive">
+      <left_joint>rear_left_wheel_joint</left_joint>
+      <right_joint>rear_right_wheel_joint</right_joint>
+      <wheel_separation>0.36</wheel_separation>
+      <wheel_radius>0.06</wheel_radius>
+      <topic>cmd_vel_rear</topic>
     </plugin>
 
   </model>

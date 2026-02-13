@@ -1,0 +1,20 @@
+[1.597s] Invoking command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package': PYTHONPATH=/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/build --no-deps symlink_data
+[2.155s] running develop
+[2.493s] running egg_info
+[2.494s] writing python_package.egg-info/PKG-INFO
+[2.494s] writing dependency_links to python_package.egg-info/dependency_links.txt
+[2.495s] writing entry points to python_package.egg-info/entry_points.txt
+[2.495s] writing requirements to python_package.egg-info/requires.txt
+[2.495s] writing top-level names to python_package.egg-info/top_level.txt
+[2.500s] reading manifest file 'python_package.egg-info/SOURCES.txt'
+[2.502s] writing manifest file 'python_package.egg-info/SOURCES.txt'
+[2.505s] running build_ext
+[2.506s] Creating /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages/python-package.egg-link (link to .)
+[2.508s] Installing log_imu_data_wifi script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.508s] Installing send_commands script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.509s] Installing test_pub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.509s] Installing test_sub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.509s] 
+[2.510s] Installed /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package
+[2.510s] running symlink_data
+[2.594s] Invoked command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package' returned '0': PYTHONPATH=/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/build --no-deps symlink_data

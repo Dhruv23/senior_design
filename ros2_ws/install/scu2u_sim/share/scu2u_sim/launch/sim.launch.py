@@ -1,1 +1,1 @@
-/home/scu2u/ros2_ws/src/scu2u_sim/launch/sim.launch.py
+/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim/launch/sim.launch.py

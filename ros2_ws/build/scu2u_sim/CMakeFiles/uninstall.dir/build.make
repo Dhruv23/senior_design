@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/scu2u/ros2_ws/src/scu2u_sim
+CMAKE_SOURCE_DIR = /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/scu2u/ros2_ws/build/scu2u_sim
+CMAKE_BINARY_DIR = /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/scu2u/ros2_ws/build/scu2u_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scu2u/ros2_ws/src/scu2u_sim /home/scu2u/ros2_ws/src/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

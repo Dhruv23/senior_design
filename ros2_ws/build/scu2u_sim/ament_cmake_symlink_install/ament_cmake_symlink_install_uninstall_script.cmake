@@ -1,7 +1,7 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
-set(install_manifest "/home/scu2u/ros2_ws/build/scu2u_sim/symlink_install_manifest.txt")
+set(install_manifest "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/symlink_install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()

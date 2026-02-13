@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/scu2u/ros2_ws/src/scu2u_sim
+CMAKE_SOURCE_DIR = /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/scu2u/ros2_ws/build/scu2u_sim
+CMAKE_BINARY_DIR = /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim
 
 # Utility rule file for scu2u_sim_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/scu2u_sim_uninstall.dir/compiler_depend.make
 include CMakeFiles/scu2u_sim_uninstall.dir/progress.make
 
 CMakeFiles/scu2u_sim_uninstall:
-	/usr/bin/cmake -P /home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 scu2u_sim_uninstall: CMakeFiles/scu2u_sim_uninstall
 scu2u_sim_uninstall: CMakeFiles/scu2u_sim_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/scu2u_sim_uninstall.dir/clean:
 .PHONY : CMakeFiles/scu2u_sim_uninstall.dir/clean
 
 CMakeFiles/scu2u_sim_uninstall.dir/depend:
-	cd /home/scu2u/ros2_ws/build/scu2u_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scu2u/ros2_ws/src/scu2u_sim /home/scu2u/ros2_ws/src/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim /home/scu2u/ros2_ws/build/scu2u_sim/CMakeFiles/scu2u_sim_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/CMakeFiles/scu2u_sim_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/scu2u_sim_uninstall.dir/depend
 

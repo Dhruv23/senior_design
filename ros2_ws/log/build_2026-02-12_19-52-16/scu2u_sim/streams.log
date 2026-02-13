@@ -1,0 +1,24 @@
+[0.673s] Invoking command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim -- -j6 -l6
+[0.873s] Invoked command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim -- -j6 -l6
+[0.890s] Invoking command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim
+[0.910s] -- Install configuration: ""
+[0.913s] -- Execute custom install script
+[0.915s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/launch/sim.launch.py
+[0.916s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/worlds/campus.sdf
+[0.917s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/worlds/shapes2.sdf
+[0.917s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/package_run_dependencies/scu2u_sim
+[0.920s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/parent_prefix_path/scu2u_sim
+[0.920s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.sh
+[0.920s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/ament_prefix_path.dsv
+[0.920s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.sh
+[0.921s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/environment/path.dsv
+[0.921s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.bash
+[0.921s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.sh
+[0.921s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.zsh
+[0.921s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/local_setup.dsv
+[0.922s] -- Symlinking: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.dsv
+[0.940s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/ament_index/resource_index/packages/scu2u_sim
+[0.940s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig.cmake
+[0.941s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/cmake/scu2u_simConfig-version.cmake
+[0.941s] -- Up-to-date symlink: /home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/share/scu2u_sim/package.xml
+[0.946s] Invoked command in '/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim

@@ -1,1 +1,1 @@
-/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake
+/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake

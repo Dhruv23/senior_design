@@ -1,1 +1,0 @@
-/home/scu2u/ros2_ws/src/python_package/setup.py

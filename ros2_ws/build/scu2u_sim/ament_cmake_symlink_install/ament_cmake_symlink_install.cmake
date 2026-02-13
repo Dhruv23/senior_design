@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/scu2u/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/scu2u/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/scu2u/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/scu2u/ros2_ws/install/scu2u_sim/${destination}")
+      set(destination "/home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,46 +311,46 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "launch" "worlds" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_directory("/home/scu2u/ros2_ws/src/scu2u_sim" DIRECTORY "launch" "worlds" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_directory("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" DIRECTORY "launch" "worlds" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/scu2u_sim/environment")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/scu2u_sim/environment")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/scu2u_sim/environment")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/scu2u_sim/environment")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/scu2u_sim/environment")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/scu2u_sim/environment")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/scu2u_sim/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/scu2u_sim/environment")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/scu2u_sim/environment")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/scu2u_sim/environment")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/scu2u_sim/environment")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/scu2u_sim/environment")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/scu2u_sim/environment")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/scu2u_sim/environment")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/scu2u_sim")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/packages/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/packages/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/packages/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_index/share/ament_index/resource_index/packages/scu2u_sim" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake" "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig-version.cmake" "DESTINATION" "share/scu2u_sim/cmake")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake" "/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig-version.cmake" "DESTINATION" "share/scu2u_sim/cmake")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake" "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig-version.cmake" "DESTINATION" "share/scu2u_sim/cmake")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig.cmake" "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_core/scu2u_simConfig-version.cmake" "DESTINATION" "share/scu2u_sim/cmake")
 
-# install(FILES "/home/scu2u/ros2_ws/src/scu2u_sim/package.xml" "DESTINATION" "share/scu2u_sim")
-ament_cmake_symlink_install_files("/home/scu2u/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/ros2_ws/src/scu2u_sim/package.xml" "DESTINATION" "share/scu2u_sim")
+# install(FILES "/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim/package.xml" "DESTINATION" "share/scu2u_sim")
+ament_cmake_symlink_install_files("/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim" FILES "/home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim/package.xml" "DESTINATION" "share/scu2u_sim")

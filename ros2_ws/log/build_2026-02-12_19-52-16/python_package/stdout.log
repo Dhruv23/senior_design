@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing python_package.egg-info/PKG-INFO
+writing dependency_links to python_package.egg-info/dependency_links.txt
+writing entry points to python_package.egg-info/entry_points.txt
+writing requirements to python_package.egg-info/requires.txt
+writing top-level names to python_package.egg-info/top_level.txt
+reading manifest file 'python_package.egg-info/SOURCES.txt'
+writing manifest file 'python_package.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages/python-package.egg-link (link to .)
+Installing log_imu_data_wifi script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+Installing send_commands script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+Installing test_pub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+Installing test_sub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+
+Installed /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package
+running symlink_data

@@ -1,8 +1,8 @@
-# Install script for directory: /home/scu2u/ros2_ws/src/scu2u_sim
+# Install script for directory: /home/scu2u/senior_design/senior_design/ros2_ws/src/scu2u_sim
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/scu2u/ros2_ws/install/scu2u_sim")
+  set(CMAKE_INSTALL_PREFIX "/home/scu2u/senior_design/senior_design/ros2_ws/install/scu2u_sim")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/scu2u/ros2_ws/build/scu2u_sim/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/scu2u/ros2_ws/build/scu2u_sim/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/scu2u/senior_design/senior_design/ros2_ws/build/scu2u_sim/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
