@@ -2,4 +2,5 @@ lidar_new/*
 venv/*
 __pycache__/*
 sllidar_ros2/*
-ros2_ws/build
+ros2_ws/build/*
+ros2_ws/src/sllidar_ros2/*
