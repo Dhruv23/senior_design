@@ -4,7 +4,7 @@
 
     <!-- body -->
     <link name="base_link">
-      <pose>0 0 0.12 0 0 0</pose>
+      <pose>0 0 0.10 0 0 0</pose> <!-- Lowering the base link to adjust center of mass -->
 
       <collision name="col">
         <geometry>
@@ -19,43 +19,43 @@
       </visual>
 
       <inertial>
-        <mass>6.0</mass>
+        <mass>1000.0</mass> <!-- Increased mass significantly -->
       </inertial>
     </link>
 
     <!-- LiDAR link -->
     <link name="lidar_link">
-      <pose>0.18 0 0.20 0 0 0</pose>
+      <pose>0.18 0 0.20 0 0 0</pose> <!-- Positioning LiDAR 0.2m above the rover -->
       <inertial><mass>0.1</mass></inertial>
 
       <visual name="vis">
         <geometry>
-          <cylinder><radius>0.03</radius><length>0.02</length></cylinder>
+          <cylinder><radius>0.03</radius><length>0.02</length></cylinder> <!-- Visual appearance of the LiDAR -->
         </geometry>
       </visual>
 
-      <sensor name="lidar" type="gpu_lidar">
+      <sensor name="lidar" type="ray"> <!-- Set the sensor type as ray -->
         <always_on>true</always_on>
         <pose>0 0 0 0 0 0</pose>
         <update_rate>10</update_rate>
-        <topic>/scan</topic>
+        <topic>/scan</topic> <!-- ROS 2 topic for publishing LiDAR data -->
         <visualize>true</visualize>
 
-        <lidar>
+        <ray>
           <scan>
             <horizontal>
-              <samples>720</samples>
+              <samples>720</samples> <!-- Number of samples (resolution) -->
               <resolution>1</resolution>
-              <min_angle>-3.14159</min_angle>
-              <max_angle>3.14159</max_angle>
+              <min_angle>-3.14159</min_angle> <!-- Field of view start angle -->
+              <max_angle>3.14159</max_angle> <!-- Field of view end angle -->
             </horizontal>
           </scan>
           <range>
-            <min>0.12</min>
-            <max>12.0</max>
+            <min>0.12</min> <!-- Minimum range (0.12 meters) -->
+            <max>12.0</max> <!-- Maximum range (12 meters) -->
             <resolution>0.01</resolution>
           </range>
-        </lidar>
+        </ray>
       </sensor>
     </link>
 
@@ -64,6 +64,14 @@
       <parent>base_link</parent>
       <child>lidar_link</child>
     </joint>
+
+    <!-- LiDAR Plugin for ROS 2 Integration -->
+    <plugin name="gazebo_ros_lidar" filename="libgazebo_ros_lidar.so">
+      <sensor_name>lidar</sensor_name>
+      <frame_id>laser</frame_id>
+      <topic>/scan</topic> <!-- ROS 2 topic for LiDAR data -->
+      <visualize>true</visualize> <!-- Enable ray visualization -->
+    </plugin>
 
     <!-- Wheel surface params -->
     <!-- wheel radius=0.06, length=0.03 -->
@@ -81,12 +89,12 @@
         </geometry>
         <surface>
           <friction>
-            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
+            <ode><mu>0.7</mu><mu2>0.7</mu2></ode> <!-- Reduced friction -->
           </friction>
           <contact>
             <ode>
-              <kp>1000000</kp>
-              <kd>100</kd>
+              <kp>100000</kp> <!-- Reduced stiffness -->
+              <kd>50</kd>     <!-- Reduced damping -->
               <min_depth>0.001</min_depth>
               <max_vel>0.1</max_vel>
             </ode>
@@ -101,7 +109,7 @@
         </geometry>
       </visual>
 
-      <inertial><mass>0.4</mass></inertial>
+      <inertial><mass>10.0</mass></inertial> <!-- Increased wheel mass -->
     </link>
 
     <!-- Rear Left Wheel -->
@@ -115,12 +123,12 @@
         </geometry>
         <surface>
           <friction>
-            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
+            <ode><mu>0.7</mu><mu2>0.7</mu2></ode> <!-- Reduced friction -->
           </friction>
           <contact>
             <ode>
-              <kp>1000000</kp>
-              <kd>100</kd>
+              <kp>100000</kp> <!-- Reduced stiffness -->
+              <kd>50</kd>     <!-- Reduced damping -->
               <min_depth>0.001</min_depth>
               <max_vel>0.1</max_vel>
             </ode>
@@ -135,7 +143,7 @@
         </geometry>
       </visual>
 
-      <inertial><mass>0.4</mass></inertial>
+      <inertial><mass>10.0</mass></inertial> <!-- Increased wheel mass -->
     </link>
 
     <!-- Front Right Wheel -->
@@ -149,12 +157,12 @@
         </geometry>
         <surface>
           <friction>
-            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
+            <ode><mu>0.7</mu><mu2>0.7</mu2></ode> <!-- Reduced friction -->
           </friction>
           <contact>
             <ode>
-              <kp>1000000</kp>
-              <kd>100</kd>
+              <kp>100000</kp> <!-- Reduced stiffness -->
+              <kd>50</kd>     <!-- Reduced damping -->
               <min_depth>0.001</min_depth>
               <max_vel>0.1</max_vel>
             </ode>
@@ -169,7 +177,7 @@
         </geometry>
       </visual>
 
-      <inertial><mass>0.4</mass></inertial>
+      <inertial><mass>10.0</mass></inertial> <!-- Increased wheel mass -->
     </link>
 
     <!-- Rear Right Wheel -->
@@ -183,12 +191,12 @@
         </geometry>
         <surface>
           <friction>
-            <ode><mu>5.0</mu><mu2>5.0</mu2></ode>
+            <ode><mu>0.7</mu><mu2>0.7</mu2></ode> <!-- Reduced friction -->
           </friction>
           <contact>
             <ode>
-              <kp>1000000</kp>
-              <kd>100</kd>
+              <kp>100000</kp> <!-- Reduced stiffness -->
+              <kd>50</kd>     <!-- Reduced damping -->
               <min_depth>0.001</min_depth>
               <max_vel>0.1</max_vel>
             </ode>
@@ -203,7 +211,7 @@
         </geometry>
       </visual>
 
-      <inertial><mass>0.4</mass></inertial>
+      <inertial><mass>10.0</mass></inertial> <!-- Increased wheel mass -->
     </link>
 
     <!-- wheel joints: axle is +/-Y -->
@@ -235,7 +243,7 @@
       <parent>base_link</parent>
       <child>front_right_wheel</child>
       <axis>
-        <xyz>0 -1 0</xyz>
+        <xyz>0 1 0</xyz> <!-- Corrected to use Y-axis for rotation -->
         <limit>
           <effort>50</effort>
           <velocity>50</velocity>
@@ -247,7 +255,7 @@
       <parent>base_link</parent>
       <child>rear_right_wheel</child>
       <axis>
-        <xyz>0 -1 0</xyz>
+        <xyz>0 1 0</xyz> <!-- Corrected to use Y-axis for rotation -->
         <limit>
           <effort>50</effort>
           <velocity>50</velocity>
@@ -261,8 +269,8 @@
             name="gz::sim::systems::DiffDrive">
       <left_joint>front_left_wheel_joint</left_joint>
       <right_joint>front_right_wheel_joint</right_joint>
-      <wheel_separation>0.36</wheel_separation>
-      <wheel_radius>0.06</wheel_radius>
+      <wheel_separation>0.36</wheel_separation>  <!-- Distance between front and rear wheels -->
+      <wheel_radius>0.06</wheel_radius>          <!-- Radius of the wheels -->
       <topic>cmd_vel_front</topic>
     </plugin>
 
@@ -271,8 +279,8 @@
             name="gz::sim::systems::DiffDrive">
       <left_joint>rear_left_wheel_joint</left_joint>
       <right_joint>rear_right_wheel_joint</right_joint>
-      <wheel_separation>0.36</wheel_separation>
-      <wheel_radius>0.06</wheel_radius>
+      <wheel_separation>0.36</wheel_separation>  <!-- Distance between front and rear wheels -->
+      <wheel_radius>0.06</wheel_radius>          <!-- Radius of the wheels -->
       <topic>cmd_vel_rear</topic>
     </plugin>
 

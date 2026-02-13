@@ -20,7 +20,8 @@ be in ~/senior_design/senior_design/ros2_ws
 colcon build 
 source install/setup.bash
 
-scu2u@scu2u-jetson:~$ ros2 launch sllidar_ros2 sllidar_a2m8_launch.py serial_port:=/dev/ttyUSB0
+
+ros2 launch sllidar_ros2 sllidar_a2m8_launch.py serial_port:=/dev/ttyUSB0
 
 in a new term (super + T):
 rviz2 -d ~/senior_design/senior_design/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz

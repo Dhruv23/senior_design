@@ -1,0 +1,24 @@
+[1.469s] Invoking command in '/home/scu2u/senior_design/senior_design/ros2_ws/src/python_package': PYTHONPATH=/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/python_package build --build-base /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/build install --record /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/install.log --single-version-externally-managed install_data
+[2.007s] running egg_info
+[2.009s] writing ../../build/python_package/python_package.egg-info/PKG-INFO
+[2.009s] writing dependency_links to ../../build/python_package/python_package.egg-info/dependency_links.txt
+[2.010s] writing entry points to ../../build/python_package/python_package.egg-info/entry_points.txt
+[2.010s] writing requirements to ../../build/python_package/python_package.egg-info/requires.txt
+[2.011s] writing top-level names to ../../build/python_package/python_package.egg-info/top_level.txt
+[2.016s] reading manifest file '../../build/python_package/python_package.egg-info/SOURCES.txt'
+[2.018s] writing manifest file '../../build/python_package/python_package.egg-info/SOURCES.txt'
+[2.021s] running build
+[2.021s] running build_py
+[2.021s] running install
+[2.022s] running install_lib
+[2.025s] running install_data
+[2.025s] running install_egg_info
+[2.030s] removing '/home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages/python_package-0.0.0-py3.10.egg-info' (and everything under it)
+[2.030s] Copying ../../build/python_package/python_package.egg-info to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages/python_package-0.0.0-py3.10.egg-info
+[2.032s] running install_scripts
+[2.082s] Installing log_imu_data_wifi script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.082s] Installing send_commands script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.083s] Installing test_pub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.083s] Installing test_sub script to /home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python_package
+[2.084s] writing list of installed files to '/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/install.log'
+[2.165s] Invoked command in '/home/scu2u/senior_design/senior_design/ros2_ws/src/python_package' returned '0': PYTHONPATH=/home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/scu2u/senior_design/senior_design/ros2_ws/install/python_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/python_package build --build-base /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/build install --record /home/scu2u/senior_design/senior_design/ros2_ws/build/python_package/install.log --single-version-externally-managed install_data
